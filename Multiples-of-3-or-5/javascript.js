@@ -7,3 +7,5 @@ function solution(number) {
   }
   return result; //change this
 }
+
+console.log(solution(50));
