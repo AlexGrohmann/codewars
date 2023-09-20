@@ -23,4 +23,3 @@ class User ():
         
         if self.rank == 8:
             self.progress = 0
-            return
