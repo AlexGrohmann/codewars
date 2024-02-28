@@ -5,3 +5,7 @@ def find_short(s):
         if len(word) < l:
             l = len(word)
     return l
+
+
+def find_short_fancy(s):
+    return min(len(x) for x in s.split())
