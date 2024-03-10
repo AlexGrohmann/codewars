@@ -33,6 +33,16 @@ def duplicate_count(text):
     return count
 
 
+def duplicate_count_fancy(text):
+    print(set(text.lower()))
+    count = 0
+    for c in set(text.lower()):
+        if text.lower().count(c) > 1:
+            count += 1
+    return count
+
+# use set() to remove duplicate chars of strings
+
 print(duplicate_count(""), 0)
 print(duplicate_count("abcde"), 0)
 print(duplicate_count("abcdeaa"), 1)
@@ -40,3 +50,4 @@ print(duplicate_count("abcdeaB"), 2)
 print(duplicate_count("Indivisibilities"), 2)
 print(duplicate_count("o9V0hSe9LfgqnSFFmUyfOegkT7ptEkcrXhJkYlF9EEOGuU8CjpUQlAN"), 17)
 print(duplicate_count("KYK1rEE8xOP"), 2)
+print(duplicate_count_fancy("KYK1rEE8xOP"), 2)
