@@ -32,3 +32,7 @@ def alphabet_position(text):
         if char.isalnum():
             result = result + " " + str(alphabet.index(char.lower()) + 1)
     return result.strip()
+
+
+def alphabet_position_fancy(text):
+    return " ".join(str(ord(c) - 96) for c in text.lower() if c.isalpha())
