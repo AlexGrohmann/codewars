@@ -1,4 +1,4 @@
-def to_camel_case(text):
+def to_camel_case_first_try(text):
     result = ""
     upperLetterNext = False
     for x in range(len(text)):
@@ -11,6 +11,13 @@ def to_camel_case(text):
             else:
                 result = result + text[x]
     return result
+
+
+def to_camel_case(text):
+    removed = text.replace("-", " ").replace("_", " ").split()
+    if len(removed) == 0:
+        return ""
+    return removed[0] + "".join([x.capitalize() for x in removed[1:]])
 
 
 print(to_camel_case(""), "", "An empty string was provided but not returned")
