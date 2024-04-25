@@ -1,4 +1,5 @@
 #!/bin/bash
+# your code here
 echo ${1}*-1 | bc
 
-sleep 3
+sleep 5
