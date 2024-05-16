@@ -13,3 +13,11 @@ def move_zeros(lst):
 
 
 move_zeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1])
+
+
+def move_zeros_fancy(array):
+    for i in array:
+        if i == 0:
+            array.remove(i)  # Remove the element from the array
+            array.append(i)  # Append the element to the end
+    return array
